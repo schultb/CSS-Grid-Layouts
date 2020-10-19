@@ -291,6 +291,10 @@ CSS Grid layout for modern browsers:
 
 @supports (grid-area: auto) {
 
+	@media screen and (min-width: 600px) {
+
+	
+
 	.site {
 		max-width: none;
 	}
@@ -312,4 +316,5 @@ CSS Grid layout for modern browsers:
 		grid-column: span 2;
 	}
 
+	}
 }
