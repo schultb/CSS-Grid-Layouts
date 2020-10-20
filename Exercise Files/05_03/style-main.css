@@ -251,3 +251,11 @@ Cards:
 /*--------------------------------------------------------------
 Card grid:
 --------------------------------------------------------------*/
+
+@supports (grid-area: auto) {
+	.card a {
+		display: grid;
+		grid-template-columns: 6em auto;
+		grid-template-rows: 1 fr 1fr;
+	}
+}
