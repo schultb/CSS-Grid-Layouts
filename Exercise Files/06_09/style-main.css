@@ -296,11 +296,12 @@ CSS Grid layout for wider screens, when browser supports grid:
 
 		.site {
 			display: grid;
+			grid-template-columns: 15em calc(100% - 1em);
 			grid-template-areas:
-				"header"
-				"main"
-				"sidebar"
-				"footer";
+				"nav header"
+				"nav main"
+				"nav sidebar"
+				"nav footer";
 		}
 
 		.masthead {
@@ -320,11 +321,7 @@ CSS Grid layout for wider screens, when browser supports grid:
 		}
 
 		.main-nav {
-			position: relative;
-			width: 12em;
-			left: -13em;
-			grid-column: 1;
-			grid-row: 1/5;
+			grid-area: nav;
 		}
 
 		.reveal .main-nav {
@@ -401,11 +398,11 @@ CSS Grid layout for wider screens, when browser supports grid:
 	@media screen and (min-width: 78em) {
 
 		.site {
-			grid-template-columns: auto 15em;
+			grid-template-columns: 15em calc(100% - 16em) 15em;
 			grid-template-areas:
-				"header header"
-				"main sidebar"
-				"footer footer";
+				"nav header header"
+				"nav main sidebar"
+				"nav footer footer";
 		}
 	}
 
